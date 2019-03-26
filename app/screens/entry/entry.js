@@ -78,7 +78,7 @@ export default class Entry extends PureComponent {
     }
 
     componentDidMount() {
-        Client4.setUserAgent(DeviceInfo.getUserAgent());
+        Client4.setUserAgent(DeviceInfo.getUserAgent() + ' SchatMobile/1.01.06');
         this.unsubscribeFromStore = store.subscribe(this.listenForHydration);
 
         EventEmitter.on(ViewTypes.LAUNCH_LOGIN, this.handleLaunchLogin);

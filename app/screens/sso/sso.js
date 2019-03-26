@@ -36,10 +36,10 @@ const oneLoginFormScalingJS = `
         if (loginPage) {
             loginPage.setAttribute('style', 'background-repeat: repeat-y;');
         }
-        
+
         function resetPadding() {
             var mainBody = document.getElementById('body-main');
-            
+
             if (mainBody) {
                 mainBody.setAttribute('style', 'height: auto; padding: 10px 0;');
             }
@@ -50,7 +50,7 @@ const oneLoginFormScalingJS = `
         }
 
         resetPadding();
-        
+
         if (submitButton) {
             submitButton.addEventListener('click', resetPadding);
         }
@@ -234,6 +234,7 @@ class SSO extends PureComponent {
                     onLoadEnd={this.onLoadEnd}
                     onMessage={messagingEnabled ? this.onMessage : null}
                     useWebKit={true}
+                    userAgent='SchatMobile/1.01.06'
                 />
             );
         }
